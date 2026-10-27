@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8"> <!-- รองรับภาษาไทย -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- รองรับมือถือ -->
+    <title>แผนที่และการเดินทาง</title> <!-- ชื่อแท็บ -->
+    <link rel="stylesheet" href="style.css"> <!-- เชื่อม CSS -->
+</head>
+<body>
+    <header class="navbar"> <!-- แถบเมนู -->
+        <div class="logo">NRTECH</div>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="about.html">เกี่ยวกับวิทยาลัย</a>
+            <a href="map.html">แผนที่</a>
+            <a href="contact.html">ติดต่อเรา</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="page-heading">
+            <h1>แผนที่และการเดินทาง</h1>
+            <p>ค้นหาตำแหน่งวิทยาลัยเทคนิคนางรอง</p>
+        </div>
+
+        <!-- รูปภาพแผนที่แบบภาพนิ่ง ตั้งชื่อ map-photo.jpg (ไม่ใช่แผนที่นำทางแบบโต้ตอบ) -->
+        <img class="content-image" src="photo/แผน1.jpg" alt="ภาพแผนที่บริเวณวิทยาลัย">
+
+        <section class="info-card">
+            <h2>ที่ตั้งวิทยาลัย</h2>
+            <p>ตำบลนางรอง อำเภอนางรอง จังหวัดบุรีรัมย์ 31110</p>
+
+            <!-- แผนที่ Google Maps แบบฝังในหน้าเว็บ ต้องเชื่อมต่ออินเทอร์เน็ต -->
+            <div class="map-frame">
+                <iframe
+                    src="https://maps.google.com/maps?q=วิทยาลัยเทคนิคนางรอง&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    title="แผนที่วิทยาลัยเทคนิคนางรอง"
+                    width="100%" height="400"
+                    style="border:0;"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- เปิดหน้า Google Maps เพื่อขอเส้นทางจากตำแหน่งของผู้ใช้ -->
+            <a class="btn btn-green"
+               href="https://www.google.com/maps/dir/?api=1&destination=วิทยาลัยเทคนิคนางรอง"
+               target="_blank" rel="noopener noreferrer">
+                เปิด Google Maps เพื่อนำทาง
+            </a>
+        </section>
+
+        <a href="index.html" class="btn btn-blue">กลับหน้าแรก</a>
+    </main>
+
+    <footer><p>© 2026 วิทยาลัยเทคนิคนางรอง</p></footer>
+</body>
+</html>

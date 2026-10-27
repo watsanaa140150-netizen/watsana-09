@@ -1,0 +1,268 @@
+/* เครื่องหมาย * ใช้กำหนดรูปแบบพื้นฐานให้ทุกองค์ประกอบ */
+* {
+    margin: 0; /* เอาระยะขอบเริ่มต้นออก */
+    padding: 0; /* เอาระยะด้านในเริ่มต้นออก */
+    box-sizing: border-box; /* รวม padding และ border ในขนาดองค์ประกอบ */
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif; /* เลือกแบบอักษร */
+    background: #f3f6ff; /* สีพื้นหลังหน้าเว็บ */
+    color: #26334d; /* สีตัวอักษรหลัก */
+    line-height: 1.8; /* ระยะห่างระหว่างบรรทัด */
+}
+
+.navbar {
+    background: linear-gradient(90deg, #172554, #4338ca); /* แถบเมนูไล่สีน้ำเงิน-ม่วง */
+    color: white; /* สีตัวอักษรในแถบเมนู */
+    padding: 15px 6%; /* ระยะห่างภายใน */
+    display: flex; /* จัดโลโก้และเมนูให้อยู่แถวเดียวกัน */
+    justify-content: space-between; /* แยกโลโก้กับเมนูคนละด้าน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่ได้เมื่อจอเล็ก */
+    gap: 15px; /* ระยะห่างระหว่างกลุ่ม */
+}
+
+.logo {
+    font-size: 25px; /* ขนาดตัวอักษรโลโก้ */
+    font-weight: bold; /* ตัวหนา */
+    color: #fcd34d; /* สีเหลือง */
+}
+
+.navbar nav {
+    display: flex; /* วางลิงก์เมนูเรียงกัน */
+    flex-wrap: wrap; /* อนุญาตให้เมนูขึ้นบรรทัดใหม่ */
+    gap: 10px; /* ช่องว่างระหว่างลิงก์ */
+}
+
+.navbar nav a {
+    color: white; /* สีลิงก์ */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    padding: 7px 12px; /* เพิ่มพื้นที่กด */
+    border-radius: 8px; /* มุมโค้ง */
+}
+
+.navbar nav a:hover {
+    background: #f59e0b; /* เปลี่ยนพื้นหลังเมื่อเอาเมาส์ชี้ */
+    color: #172554; /* เปลี่ยนสีตัวอักษรเมื่อชี้ */
+}
+
+.hero {
+    min-height: 500px; /* ความสูงขั้นต่ำของส่วนต้อนรับ */
+    display: flex; /* ใช้จัดวางเนื้อหา */
+    align-items: center; /* จัดเนื้อหากึ่งกลางแนวตั้ง */
+    justify-content: center; /* จัดเนื้อหากึ่งกลางแนวนอน */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    padding: 50px 20px; /* ระยะห่างภายใน */
+    color: white; /* สีข้อความ */
+    background: linear-gradient(135deg, #172554, #4338ca, #7c3aed); /* พื้นหลังไล่สี */
+}
+
+.hero-content {
+    max-width: 950px; /* จำกัดความกว้างเนื้อหา */
+    width: 100%; /* ใช้ความกว้างที่มี */
+}
+
+.tagline {
+    color: #fde68a; /* สีข้อความต้อนรับ */
+    font-weight: bold; /* ตัวหนา */
+    letter-spacing: 3px; /* ระยะห่างตัวอักษร */
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px); /* ขนาดหัวข้อปรับตามจอ */
+    margin: 10px 0; /* ระยะบนและล่าง */
+}
+
+.hero h2 {
+    font-size: 24px; /* ขนาดหัวข้อภาษาอังกฤษ */
+    font-weight: normal; /* น้ำหนักตัวอักษรปกติ */
+    margin-bottom: 15px; /* ระยะด้านล่าง */
+}
+
+/* รูปภาพที่ใส่ด้วยแท็ก img */
+.hero-image {
+    display: block; /* ให้รูปเป็นบล็อก */
+    width: 100%; /* ขยายรูปเต็มพื้นที่ที่อนุญาต */
+    max-height: 360px; /* จำกัดความสูงสูงสุด */
+    object-fit: cover; /* ครอบรูปให้เต็มกรอบโดยไม่บิดสัดส่วน */
+    border-radius: 18px; /* มุมรูปโค้ง */
+    margin: 25px auto; /* เว้นระยะและจัดกลาง */
+    border: 4px solid #ffffff66; /* ขอบสีขาวโปร่งแสง */
+}
+
+.content-image {
+    display: block; /* ให้รูปอยู่คนละบรรทัด */
+    width: 100%; /* ให้รูปปรับตามความกว้างกรอบ */
+    max-width: 900px; /* จำกัดความกว้างไม่ให้ใหญ่เกินไป */
+    max-height: 420px; /* จำกัดความสูง */
+    object-fit: cover; /* ครอบรูปให้พอดีกรอบ */
+    border-radius: 16px; /* มุมรูปโค้ง */
+    margin: 20px auto; /* จัดกลางและเว้นระยะ */
+    box-shadow: 0 5px 18px #17255420; /* เงาใต้รูป */
+}
+
+.buttons {
+    display: flex; /* วางปุ่มในแถว */
+    flex-wrap: wrap; /* ให้ปุ่มย้ายบรรทัดได้ */
+    justify-content: center; /* จัดปุ่มกึ่งกลาง */
+    gap: 14px; /* ช่องว่างระหว่างปุ่ม */
+    margin-top: 25px; /* ระยะเหนือกลุ่มปุ่ม */
+}
+
+.btn {
+    display: inline-block; /* ทำให้ลิงก์มีขนาดและระยะ padding ได้ */
+    text-decoration: none; /* เอาเส้นใต้ */
+    color: white; /* สีข้อความ */
+    padding: 12px 22px; /* ขนาดพื้นที่ปุ่ม */
+    border-radius: 12px; /* มุมโค้ง */
+    font-weight: bold; /* ตัวหนา */
+    margin: 8px 5px; /* ระยะรอบปุ่ม */
+    transition: 0.3s; /* ทำให้เอฟเฟกต์เปลี่ยนนุ่มนวล */
+    box-shadow: 0 5px 12px #0002; /* เงาปุ่ม */
+}
+
+.btn:hover {
+    transform: translateY(-4px); /* ยกปุ่มขึ้นเมื่อชี้เมาส์ */
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, #2563eb, #4f46e5); /* ปุ่มสีน้ำเงิน */
+}
+
+.btn-green {
+    background: linear-gradient(135deg, #059669, #10b981); /* ปุ่มสีเขียว */
+}
+
+.btn-orange {
+    background: linear-gradient(135deg, #ea580c, #f59e0b); /* ปุ่มสีส้ม */
+}
+
+.welcome {
+    max-width: 900px; /* จำกัดความกว้างส่วนต้อนรับ */
+    margin: 35px auto; /* จัดกลางและเว้นระยะ */
+    padding: 30px 25px; /* ระยะด้านใน */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    background: white; /* พื้นหลังสีขาว */
+    border-radius: 20px; /* มุมโค้ง */
+    box-shadow: 0 5px 20px #1e3a8a12; /* เงากล่อง */
+}
+
+.welcome h2, .info-card h2 {
+    color: #4338ca; /* สีหัวข้อ */
+    margin: 12px 0; /* ระยะหัวข้อ */
+}
+
+.page-container {
+    max-width: 1000px; /* จำกัดความกว้างหน้าด้านใน */
+    margin: 35px auto; /* จัดกึ่งกลาง */
+    padding: 0 20px 40px; /* ระยะด้านใน */
+    text-align: center; /* จัดเนื้อหากึ่งกลาง */
+}
+
+.page-heading {
+    padding: 30px 15px; /* ระยะด้านในหัวหน้า */
+    margin-bottom: 25px; /* ระยะใต้หัวหน้า */
+    border-radius: 20px; /* มุมโค้ง */
+    color: white; /* ตัวอักษรสีขาว */
+    background: linear-gradient(135deg, #2563eb, #7c3aed); /* ไล่สี */
+}
+
+.page-heading h1 {
+    font-size: clamp(25px, 4vw, 36px); /* ปรับขนาดหัวข้อตามจอ */
+}
+
+.info-card {
+    background: white; /* พื้นหลังการ์ด */
+    text-align: left; /* จัดข้อความชิดซ้าย */
+    padding: 30px; /* ระยะด้านใน */
+    margin-bottom: 25px; /* ระยะด้านล่าง */
+    border-radius: 18px; /* มุมโค้ง */
+    box-shadow: 0 6px 22px #17255412; /* เงาการ์ด */
+    border-top: 5px solid #6366f1; /* เส้นสีด้านบน */
+}
+
+.info-card ul {
+    padding-left: 25px; /* เว้นที่สำหรับสัญลักษณ์รายการ */
+}
+
+.note {
+    margin-top: 20px; /* ระยะด้านบน */
+    padding: 12px; /* ระยะด้านใน */
+    border-radius: 8px; /* มุมโค้ง */
+    background: #eef2ff; /* พื้นหลังสีอ่อน */
+    color: #4338ca; /* สีตัวอักษร */
+}
+
+.map-frame {
+    overflow: hidden; /* ซ่อนส่วนเกินในกรอบแผนที่ */
+    border-radius: 14px; /* มุมโค้ง */
+    margin: 20px 0; /* ระยะบนและล่าง */
+}
+
+.map-frame iframe {
+    display: block; /* กำจัดช่องว่างใต้ iframe */
+    max-width: 100%; /* ไม่ให้กว้างเกินหน้าจอ */
+}
+
+.contact-item {
+    display: flex; /* วางไอคอนกับข้อความในแถว */
+    align-items: flex-start; /* จัดชิดด้านบน */
+    gap: 15px; /* ช่องว่างระหว่างไอคอนกับข้อความ */
+    padding: 18px 0; /* ระยะบนและล่าง */
+    border-bottom: 1px solid #e5e7eb; /* เส้นแบ่งรายการ */
+}
+
+.contact-item > span {
+    font-size: 27px; /* ขนาดไอคอนอีโมจิ */
+}
+
+.contact-item h3 {
+    color: #4338ca; /* สีหัวข้อย่อย */
+}
+
+.contact-item a {
+    color: #2563eb; /* สีลิงก์ */
+    overflow-wrap: anywhere; /* ตัด URL ยาวให้พอดี */
+}
+
+footer {
+    text-align: center; /* จัดข้อความกลาง */
+    padding: 22px 15px; /* ระยะด้านใน */
+    background: #172554; /* พื้นหลังส่วนท้าย */
+    color: white; /* ตัวอักษรสีขาว */
+    margin-top: 30px; /* ระยะเหนือ footer */
+}
+
+/* กฎเหล่านี้ทำงานเมื่อหน้าจอกว้างไม่เกิน 650px เช่น โทรศัพท์ */
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column; /* วางโลโก้และเมนูเป็นแนวตั้ง */
+        text-align: center; /* จัดกลาง */
+    }
+
+    .navbar nav {
+        justify-content: center; /* จัดเมนูให้อยู่กลาง */
+    }
+
+    .hero {
+        min-height: 420px; /* ลดความสูงบนมือถือ */
+    }
+
+    .buttons {
+        flex-direction: column; /* วางปุ่มเรียงลงมา */
+        align-items: stretch; /* ให้ปุ่มกว้างเต็มแถว */
+    }
+
+    .btn {
+        text-align: center; /* จัดข้อความปุ่มกลาง */
+    }
+
+    .info-card {
+        padding: 20px; /* ลดระยะด้านใน */
+    }
+
+    .map-frame iframe {
+        height: 320px; /* ลดความสูงแผนที่ */
+    }
+}
